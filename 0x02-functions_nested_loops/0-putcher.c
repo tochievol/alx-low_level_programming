@@ -1,18 +1,23 @@
 #include "main.h"
+
 /**
 *main - print putchar
-*Return: always 0
+*
+* Decription: prints _putchar
+*
+*Return: 0 (success)
 */
+
 int main(void)
 {
-_putchar('_');
-_putchar('p');
-_putchar('u');
-_putchar('t');
-_putchar('c');
-_putchar('h');
-_putchar('a');
-_putchar('r');
+char text[9] = "_putchar";
+int i =o;
+
+for (i = 0; i < 8; i++)
+{
+_putchar(text[i]);
+}
 _putchar('\n');
+
 return (0);
 }

@@ -7,22 +7,19 @@
  */
 char *leet(char *s)
 {
-	int count = 0, i;
-	int low_letters[] = {97, 101, 111, 116, 108};
-	int upp_letters[] = {65, 69, 79, 84, 76}
-	int numbers[] = {52, 51, 48, 55, 49};
+	int i = 0, j;
+	char subs[10] = {'4', '4', '3', '3', '0', '0', '7', '7', '1', '1'},
 
-	while (*(s + count) != '\0')
+     	     str[10] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
+
+	while (s[i])
 	{
-		for (i = 0; i < 5; i++)
-		{
-			if (*(s + count) == low_letters[i] || *(s + count) == upp_letters[i])
-			{
-				*(s + count) = numbers[i];
-				break;
-			}
-		}
-		count++;
+		for (j = 0; j < 10; j++)
+	            if (s[i] == str[j])
+			s[i] = subs[j];
+
+		i++;
 	}
+
 	return (s);
 }

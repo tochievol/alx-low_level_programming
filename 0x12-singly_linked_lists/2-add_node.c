@@ -1,27 +1,30 @@
 #include "lists.h"
-#include <stdio.h>
 
 /**
- * print_list - Print all the elements of a list_t list.
- * @h: The list_t list.
- *
- * Return: The number of nodes in h.
+ * add_node - adds a new node at the beginning
+ * of a list_t list.
+ * @head: head of the linked list.
+ * @str: string to store in the list.
+ * Return: address of the head.
  */
 
-size_t print_list(const list *h)
+list_t *add_node(list_t **head, const char *str)
 {
-	size_t nodes = 0;
+	list_t *new;
+	size_t nchar;
 	
-	while (h)
-	{
-		if (h->str == NULL)
-			printf("(0) (n11)\n");
-		else
-			printf("(%d) %\n", h->len, h->str);
-		
-		nodes++;
-		h = h->next;
-	}
+	new = malloc(sizeof(list_t));
+	if (new == NULL)
+		return (NULL);
 
-	return (nodes);
+	new->str = strdup(str);
+
+	for (nchar = 0; str[nchar]; nchar++)
+		;
+	
+	new->len = nchar;
+	new->next = *head;
+	*head = new;
+
+	return (*head);
 }

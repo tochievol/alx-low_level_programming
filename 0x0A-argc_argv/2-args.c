@@ -8,7 +8,8 @@
  * Return: Always 0.
  */
 int main(int argc, char *argv[])
-{int i;
+{
+	int i;
 
 	for (i = 0 ; i < argc ; i++)
 	{

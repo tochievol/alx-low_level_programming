@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * main - main function 
+ * main - main function
  * @argc: argumentc
  * @argv: vector of arguments
  *Return: Always 0

@@ -10,7 +10,7 @@ void free_listp2(listp_t **head)
 {
 	listp_t *temp;
 	listp_t *curr;
-	
+
 	if (head != NULL)
 	{
 		curr = *head;
@@ -65,7 +65,7 @@ size_t free_listint_safe(listint_t **h)
 		free(curr);
 		nnodes++;
 	}
-	
+
 	*h = NULL;
 	free_listp2(&hptr);
 	return (nnodes);

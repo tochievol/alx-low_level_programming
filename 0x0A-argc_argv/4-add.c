@@ -20,11 +20,13 @@ int isImteger(const char *s)
 	return (0);
 }
 
-/**main - adds positive numbers
+/**
+ * main - adds positive numbers
  * @argc: int
  * @argv: list
  * Return: 0
  */
+
 int main(int argc, char const *argv[])
 {
 	int sum = 0;
